@@ -75,7 +75,7 @@ git clone https://your_personal_token@your_repo_address.git
 cd CVVin23
 ```
 
-### Traning
+### Training
 Modify the configurations in `.yaml` config files, then run:
 
 ```bash
