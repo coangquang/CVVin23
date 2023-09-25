@@ -544,7 +544,7 @@ class ISNetGTEncoder(nn.Module):
 class ISNetDIS_DP(nn.Module):
 
     def __init__(self,in_ch=3,out_ch=1):
-        super(ISNetDIS,self).__init__()
+        super(ISNetDIS_DP,self).__init__()
 
         self.conv_in = nn.Conv2d(in_ch,64,3,stride=2,padding=1)
         self.pool_in = nn.MaxPool2d(2,stride=2,ceil_mode=True)
