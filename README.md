@@ -8,8 +8,6 @@ This is the source code of the project "Salient Object Detection " of the course
   - [Folder Structure](#folder-structure)
   - [Model Zoo](#model-zoo)
   - [Usage](#usage)
-    - [Config file format](#config-file-format)
-    - [Using config files](#using-config-files)
     - [Resuming from checkpoints](#resuming-from-checkpoints)
     - [Evaluating](#evaluating)
     - [Inference](#inference)
@@ -69,34 +67,29 @@ CVVin23/
 
 Install the required packages:
 
-```
-pip install -r utils/requirements.txt
-```
-<!-- pipreqs for get requirements.txt -->
 
-Running private repository on Kaggle:
-1. [Generate your token](https://github.com/settings/tokens)
-2. Get repo address from `github.com/.../...git`: 
+Running  repository on Kaggle:
+
 ```bash
 git clone https://your_personal_token@your_repo_address.git
-cd CVP
+cd CVVin23
 ```
 
-### Using config files
+### Traning
 Modify the configurations in `.yaml` config files, then run:
 
 ```bash
-python scripts/train_dis.py [CONFIG] [RESUME] [DEVICE] [BATCH_SIZE] [EPOCHS]
+python train_dis.py [MODEL] [RESUME] [DEVICE] [BATCH_SIZE] [EPOCHS]
 ```
 
 ### Resuming from checkpoints
 You can resume from a previously saved checkpoint by:
 
 ```bash
-python scripts/train.py --resume path/to/the/ckpt
+python train_dis.py -resume path/to/the/ckpt
 ```
 
 ### Evaluating
 ```bash
-python scripts/test.py
+python evaluation.py
 ```
